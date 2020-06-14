@@ -1,0 +1,52 @@
+.Arrow {
+    position: absolute;
+    width: 40px;
+    background-color: #00000036;
+    z-index: 1;
+    transition: background-color 0.3s ease-in;
+    height: 50px;
+    top: 55%;
+    transform: translateY(-55%);
+}
+
+.LeftArrow {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    left: 3%;
+}
+
+.RightArrow {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: 3%;
+}
+
+
+.Arrow:hover{
+    background-color: #000000a8;
+    cursor: pointer;
+}
+
+.arrow {
+    display: inline-block;
+    border: 3px solid white;
+    height: 10px;
+    width: 10px;
+    border-left: none;
+    border-bottom: none;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.arrowLeft {
+    transform: rotateZ(-135deg);
+}
+
+.arrowRight {
+    transform: rotateZ(45deg);
+}
