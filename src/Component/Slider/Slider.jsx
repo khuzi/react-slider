@@ -58,14 +58,24 @@ class Slider extends Component {
     
     goLeft = () => {
         //  this.setState({x: this.state.x + 100})
-        this.state.x === 0 ? this.setState({x: -100*(this.state.sliderArray.length - 1)}) :
-        this.setState({x: this.state.x + 100})
+        this.state.x === 0 ? this.setState((prevState) => {
+           return {x: -100*(prevState.sliderArray.length - 1)}
+        }) :
+        this.setState((prevState) => {
+           return {
+            x: prevState.x + 100
+           }
+        })
     }
 
     goRight = () => {
         // this.setState({x: this.state.x - 100})
         this.state.x === -100*(this.state.sliderArray.length-1) ?
-        this.setState({x: 0}) : this.setState({x: this.state.x - 100})
+        this.setState({x: 0}) : this.setState((prevState) => {
+            return {
+                x: prevState.x - 100
+            }
+        })
     }
 
     render() {
